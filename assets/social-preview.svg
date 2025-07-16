@@ -1,0 +1,214 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1E293B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F172A;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glass gradient for logo -->
+    <linearGradient id="logoGlassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.4" />
+      <stop offset="30%" style="stop-color:#f0f9ff;stop-opacity:0.3" />
+      <stop offset="70%" style="stop-color:#0ea5e9;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <!-- Text gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#A78BFA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Card shadow -->
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="40" fill="#1E40AF" opacity="0.1"/>
+  <circle cx="1180" cy="540" r="60" fill="#7C3AED" opacity="0.1"/>
+  <circle cx="1200" cy="80" r="30" fill="#06B6D4" opacity="0.1"/>
+  
+  <!-- Main content container -->
+  <rect x="80" y="80" width="1120" height="480" rx="24" 
+        fill="rgba(255,255,255,0.05)" 
+        stroke="rgba(255,255,255,0.1)" 
+        stroke-width="1" 
+        filter="url(#cardShadow)"/>
+  
+  <!-- Logo (liquid glass version, scaled up) -->
+  <g transform="translate(140, 180) scale(1.5)">
+    <!-- Background liquid shape -->
+    <path d="M15 60 Q20 20 60 15 Q100 20 105 60 Q100 100 60 105 Q20 100 15 60 Z" 
+          fill="rgba(6,182,212,0.8)"/>
+    
+    <!-- Glass overlay -->
+    <circle cx="60" cy="60" r="50" 
+            fill="url(#logoGlassGradient)" 
+            stroke="rgba(255,255,255,0.3)" 
+            stroke-width="1"/>
+    
+    <!-- Inner glass highlight -->
+    <ellipse cx="45" cy="35" rx="20" ry="15" 
+             fill="rgba(255,255,255,0.4)" 
+             transform="rotate(-20 45 35)"/>
+    
+    <!-- Terminal content -->
+    <g transform="translate(25, 25)">
+      <rect x="8" y="15" width="54" height="40" rx="6" 
+            fill="rgba(255,255,255,0.2)" 
+            stroke="rgba(255,255,255,0.3)" 
+            stroke-width="1"/>
+      
+      <rect x="8" y="15" width="54" height="12" rx="6" 
+            fill="rgba(255,255,255,0.15)"/>
+      
+      <circle cx="15" cy="21" r="2" fill="rgba(239,68,68,0.8)"/>
+      <circle cx="23" cy="21" r="2" fill="rgba(245,158,11,0.8)"/>
+      <circle cx="31" cy="21" r="2" fill="rgba(16,185,129,0.8)"/>
+      
+      <text x="13" y="38" font-family="Monaco, monospace" font-size="7" fill="rgba(255,255,255,0.9)">></text>
+      <rect x="18" y="33" width="18" height="2" rx="1" fill="rgba(255,255,255,0.7)"/>
+      
+      <path d="M45 30 L40 40 L45 40 L42 50 L50 38 L45 38 L48 30 Z" 
+            fill="rgba(255,255,255,0.9)"/>
+    </g>
+  </g>
+  
+  <!-- Main heading -->
+  <text x="420" y="220" 
+        font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif" 
+        font-size="72" 
+        font-weight="800" 
+        fill="url(#textGradient)" 
+        filter="url(#glow)">QuickCMD</text>
+  
+  <!-- Subtitle -->
+  <text x="420" y="280" 
+        font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif" 
+        font-size="28" 
+        font-weight="400" 
+        fill="rgba(255,255,255,0.8)">Lightning-fast command launcher for macOS</text>
+  
+  <!-- Feature bullets -->
+  <g transform="translate(420, 320)">
+    <!-- Feature 1 -->
+    <circle cx="10" cy="15" r="4" fill="#10B981"/>
+    <text x="25" y="20" 
+          font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" 
+          font-size="18" 
+          fill="rgba(255,255,255,0.9)">⚡ Global shortcuts &amp; menubar integration</text>
+    
+    <!-- Feature 2 -->
+    <circle cx="10" cy="55" r="4" fill="#3B82F6"/>
+    <text x="25" y="60" 
+          font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" 
+          font-size="18" 
+          fill="rgba(255,255,255,0.9)">🎯 Smart command search with favorites</text>
+    
+    <!-- Feature 3 -->
+    <circle cx="10" cy="95" r="4" fill="#8B5CF6"/>
+    <text x="25" y="100" 
+          font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif" 
+          font-size="18" 
+          fill="rgba(255,255,255,0.9)">🎨 Beautiful, modern UI with Tauri &amp; React</text>
+  </g>
+  
+  <!-- Terminal preview window -->
+  <g transform="translate(800, 300)">
+    <!-- Window shadow -->
+    <rect x="4" y="4" width="380" height="220" rx="12" fill="rgba(0,0,0,0.3)"/>
+    
+    <!-- Window -->
+    <rect x="0" y="0" width="380" height="220" rx="12" 
+          fill="rgba(15,23,42,0.95)" 
+          stroke="rgba(255,255,255,0.1)" 
+          stroke-width="1"/>
+    
+    <!-- Window header -->
+    <rect x="0" y="0" width="380" height="40" rx="12" fill="rgba(30,41,59,0.8)"/>
+    <circle cx="20" cy="20" r="6" fill="#EF4444"/>
+    <circle cx="40" cy="20" r="6" fill="#F59E0B"/>
+    <circle cx="60" cy="20" r="6" fill="#10B981"/>
+    
+    <!-- Arrow pointing up -->
+    <path d="M190 15 L185 25 L195 25 Z" fill="rgba(255,255,255,0.6)"/>
+    
+    <!-- Window content -->
+    <rect x="15" y="55" width="350" height="150" rx="8" 
+          fill="rgba(15,23,42,0.8)" 
+          stroke="rgba(255,255,255,0.1)" 
+          stroke-width="1"/>
+    
+    <!-- Search bar -->
+    <rect x="25" y="70" width="280" height="30" rx="6" 
+          fill="rgba(30,41,59,0.6)" 
+          stroke="rgba(96,165,250,0.3)" 
+          stroke-width="1"/>
+    <text x="35" y="88" 
+          font-family="SF Pro Text, sans-serif" 
+          font-size="14" 
+          fill="rgba(255,255,255,0.6)">Search commands...</text>
+    
+    <!-- Command items -->
+    <g transform="translate(25, 110)">
+      <!-- Item 1 -->
+      <rect x="0" y="0" width="330" height="25" rx="4" fill="rgba(96,165,250,0.1)"/>
+      <circle cx="12" cy="12" r="4" fill="#10B981"/>
+      <text x="25" y="16" font-family="SF Pro Text, sans-serif" font-size="12" fill="white">Open Terminal</text>
+      
+      <!-- Item 2 -->
+      <rect x="0" y="30" width="330" height="25" rx="4" fill="rgba(255,255,255,0.02)"/>
+      <circle cx="12" cy="42" r="4" fill="#3B82F6"/>
+      <text x="25" y="46" font-family="SF Pro Text, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">Open VS Code</text>
+      
+      <!-- Item 3 -->
+      <rect x="0" y="60" width="330" height="25" rx="4" fill="rgba(255,255,255,0.02)"/>
+      <circle cx="12" cy="72" r="4" fill="#8B5CF6"/>
+      <text x="25" y="76" font-family="SF Pro Text, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">Git Status</text>
+    </g>
+  </g>
+  
+  <!-- Tech stack badges -->
+  <g transform="translate(420, 480)">
+    <!-- React badge -->
+    <rect x="0" y="0" width="80" height="24" rx="12" fill="rgba(97,218,251,0.2)"/>
+    <text x="40" y="16" 
+          font-family="SF Pro Text, sans-serif" 
+          font-size="12" 
+          text-anchor="middle" 
+          fill="#61DAFB">React</text>
+    
+    <!-- Tauri badge -->
+    <rect x="90" y="0" width="80" height="24" rx="12" fill="rgba(255,206,84,0.2)"/>
+    <text x="130" y="16" 
+          font-family="SF Pro Text, sans-serif" 
+          font-size="12" 
+          text-anchor="middle" 
+          fill="#FFCE54">Tauri</text>
+    
+    <!-- TypeScript badge -->
+    <rect x="180" y="0" width="100" height="24" rx="12" fill="rgba(49,120,198,0.2)"/>
+    <text x="230" y="16" 
+          font-family="SF Pro Text, sans-serif" 
+          font-size="12" 
+          text-anchor="middle" 
+          fill="#3178C6">TypeScript</text>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="minimalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1F2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#374151;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer ring -->
+  <circle cx="60" cy="60" r="55" fill="none" stroke="#E5E7EB" stroke-width="2"/>
+  
+  <!-- Inner circle -->
+  <circle cx="60" cy="60" r="45" fill="url(#minimalGradient)"/>
+  
+  <!-- Terminal bracket -->
+  <g transform="translate(35, 35)" stroke="white" stroke-width="3" fill="none" stroke-linecap="round">
+    <!-- Left bracket -->
+    <path d="M10 15 L5 25 L10 35"/>
+    <!-- Right bracket -->
+    <path d="M40 15 L45 25 L40 35"/>
+    <!-- Cursor -->
+    <line x1="20" y1="20" x2="30" y2="20"/>
+    <!-- Quick indicator -->
+    <circle cx="25" cy="30" r="2" fill="white"/>
+  </g>
+</svg>
