@@ -86,18 +86,20 @@ pub fn run() {
                 .build(app)?;
 
             println!("System tray created successfully");
+            println!("Tray icon should now be visible in menubar");
 
             // Hide dock icon on macOS
             #[cfg(target_os = "macos")]
             app.set_activation_policy(tauri::ActivationPolicy::Accessory);
 
-            // Initially hide the window after setup (commented for debugging)
-            // if let Some(window) = app.get_webview_window("main") {
-            //     window.hide().unwrap();
-            // }
+            // Initially hide the window after setup
+            if let Some(window) = app.get_webview_window("main") {
+                window.hide().unwrap();
+            }
 
             Ok(())
         })
+        // Temporarily disable auto-hide on focus loss to prevent immediate closure
         // .on_window_event(|window, event| {
         //     if let tauri::WindowEvent::Focused(focused) = event {
         //         if !focused {
